@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Satisfy&display=swap");
+
+/* Paleta de cores */
+$c1: #f5f7fa;
+$c2: #e1e3e5;
+$c3: #a5a6a8;
+$c4: #555657;
+$c5: #414142;
+$c6: #2d2d2e;
+$c7: #19191a;
+$c8: #0d0d0d;
+
+$primary: #27ae60;
+
+/* Tamanhos */
+$border: 0.25rem solid rgba(0, 0, 0, 0.1);
+$border-radius: 0.25rem;
+$box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+$max-width: 1200px;
+
+/* Mixins */
+@mixin grid($tamanho) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($tamanho, 1fr));
+  gap: 1.5rem;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+@mixin font($size) {
+  font-family: "Satisfy", cursive;
+  font-size: $size;
+  color: $primary;
+}
