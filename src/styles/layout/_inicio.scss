@@ -1,7 +1,6 @@
 .inicio {
   @include flex;
   gap: 2rem;
-  padding: 1.5rem 0;
 
   @include respond-to(mobile) {
     flex-direction: column-reverse;
@@ -40,6 +39,7 @@
 .category-list {
   @include grid(140px);
   justify-items: center;
+  padding-bottom: 1.5rem;
 
   .card {
     display: flex;
