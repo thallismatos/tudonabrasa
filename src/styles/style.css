@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Satisfy&display=swap");
+/* Paleta de cores */
+/* Tamanhos */
+/* Mixins */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  /* Estilos para Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #e31414 #f5f7fa;
+}
+
+/* Estilos para WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f7fa;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e31414;
+  border-radius: 10px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  outline: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #e31414;
+  color: #f5f7fa;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+.button:hover {
+  background-color: #b41010;
+}
+
+.card {
+  background: #e1e3e5;
+  padding: 60px;
+  text-align: center;
+  border-radius: 0.25rem;
+  width: 130px;
+  height: 150px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #f5f7fa;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #19191a;
+  display: flex;
+  align-items: center;
+}
+.container .logo img {
+  padding-right: 0.5rem;
+}
+@media (max-width: 768px) {
+  .container .logo {
+    font-size: 20px;
+  }
+  .container .logo img {
+    padding: 0.25rem;
+  }
+}
+.container .menu-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .container .menu-mobile {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+.container .list-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .container .list-menu {
+    display: none;
+  }
+}
+.container .list-menu a {
+  text-decoration: none;
+  color: #555657;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.container .list-menu a:hover {
+  color: #e31414;
+}
+
+.inicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .inicio {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
+.inicio .text-inicio span {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #e31414;
+}
+.inicio .text-inicio h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: #19191a;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.inicio .text-inicio p {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: #414142;
+  margin-bottom: 10px;
+  line-height: 2;
+}
+.inicio .img-inicio {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding-bottom: 1.5rem;
+}
+.category-list .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fa;
+  padding: 14px;
+  text-align: center;
+  border-radius: 0.25rem;
+  width: 160px;
+  height: 160px;
+  transition: background 0.5s ease;
+}
+.category-list .card img {
+  width: 90px;
+  height: auto;
+}
+.category-list .card h3 {
+  font-size: 18px;
+  color: #0d0d0d;
+}
+.category-list .card:hover {
+  background: #e31414;
+}
+.category-list .card:hover h3 {
+  color: #f5f7fa;
+}
+
+.bg-about {
+  background-color: #f5f7fa;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.about .img-about {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.about .img-about img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .about .img-about img {
+    width: 75%;
+  }
+}
+.about .text-about {
+  padding: 1rem 0;
+}
+.about .text-about span {
+  color: #e31414;
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+  color: #e31414;
+}
+.about .text-about h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  padding-top: 1rem;
+  margin-bottom: 10px;
+}
+.about .text-about p {
+  color: #414142;
+  margin-bottom: 10px;
+  line-height: 2;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+.about .text-about a {
+  margin-bottom: 1rem;
+}
+
+.list-advantage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.5rem;
+  justify-items: start;
+}
+.list-advantage .item-advantage {
+  display: flex;
+  align-items: center;
+}
+.list-advantage .item-advantage h3 {
+  margin-left: 0.5rem;
+  white-space: nowrap;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}/*# sourceMappingURL=style.css.map */
