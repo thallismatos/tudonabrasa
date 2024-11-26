@@ -1,0 +1,66 @@
+.bg-about {
+  background-color: $c1;
+}
+
+.about {
+  @include flex;
+  gap: 1.5rem;
+
+  @include respond-to(mobile) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .img-about {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+
+      @include respond-to(mobile) {
+        width: 75%;
+      }
+    }
+  }
+
+  .text-about {
+    padding: 1rem 0;
+    span {
+      color: $primary;
+      @include font(2rem);
+    }
+    h2 {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      padding-top: 1rem;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $c5;
+      margin-bottom: 10px;
+      line-height: 2;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+    }
+    a {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.list-advantage {
+  @include grid(170px);
+  justify-items: start;
+
+  .item-advantage {
+    display: flex;
+    align-items: center;
+    h3 {
+      margin-left: 0.5rem;
+      white-space: nowrap;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+    }
+  }
+}
