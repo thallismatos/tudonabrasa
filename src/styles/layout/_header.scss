@@ -23,11 +23,33 @@
     img {
       padding-right: 0.5rem;
     }
+
+    @include respond-to(mobile) {
+      font-size: 20px;
+
+      img {
+        padding: 0.25rem;
+      }
+    }
+  }
+
+  .menu-mobile {
+    display: none;
+
+    @include respond-to(mobile) {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
   }
 
   .list-menu {
     display: flex;
     gap: 1.5rem;
+
+    @include respond-to(mobile) {
+      display: none;
+    }
 
     a {
       text-decoration: none;
