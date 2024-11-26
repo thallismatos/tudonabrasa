@@ -1,0 +1,16 @@
+{
+  "name": "tudonabrasa",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r   <img alt=\"\" src=\"\" width=\"20%\">\r   <h3></h3>\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/styles/style.scss src/styles/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.81.0"
+  }
+}
