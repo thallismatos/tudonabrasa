@@ -64,7 +64,7 @@ aside,
 canvas,
 details,
 embed,
-f figure,
+figure,
 figcaption,
 footer,
 header,
@@ -107,8 +107,27 @@ section {
 html {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  overflow: hidden;
   scroll-behavior: smooth;
+
+  /* Estilos para Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: $primary $c1;
+}
+
+/* Estilos para WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 10px;
 }
 
 ol,

@@ -1,0 +1,28 @@
+.main-container {
+  @include container;
+}
+
+.button {
+  display: inline-block;
+  background-color: $primary;
+  color: $c1;
+  border: none;
+  border-radius: $border-radius;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
+}
+
+.card {
+      background: $c2;
+      padding: 60px;
+      text-align: center;
+      border-radius: $border-radius;
+      width: 130px;
+      height: 150px;
+}
