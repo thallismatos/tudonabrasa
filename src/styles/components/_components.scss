@@ -1,5 +1,9 @@
 .main-container {
   @include container;
+
+  @include respond-to(mobile) {
+    padding: 1.25rem 1rem;
+  }
 }
 
 .button {

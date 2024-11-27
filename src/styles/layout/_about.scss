@@ -51,7 +51,7 @@
 }
 
 .list-advantage {
-  @include grid(170px);
+  @include grid(200px);
   justify-items: start;
 
   .item-advantage {
