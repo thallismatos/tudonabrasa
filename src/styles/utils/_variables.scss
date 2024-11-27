@@ -22,7 +22,7 @@ $max-width: 1200px;
 @mixin grid($tamanho) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($tamanho, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 @mixin flex {
@@ -45,11 +45,11 @@ $max-width: 1200px;
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == mobile {
-    @media (max-width: 768px) {
+    @media (max-width: 767.98px) {
       @content;
     }
   } @else if $breakpoint == tablet {
-    @media (max-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1023.98px) {
       @content;
     }
   }

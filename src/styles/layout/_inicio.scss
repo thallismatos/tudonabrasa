@@ -37,9 +37,13 @@
 }
 
 .category-list {
-  @include grid(170px);
+  @include grid(140px);
   justify-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 
   .card {
     display: flex;
