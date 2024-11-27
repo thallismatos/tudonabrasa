@@ -34,7 +34,7 @@ $max-width: 1200px;
 @mixin container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 3em;
 }
 
 @mixin font($size) {
