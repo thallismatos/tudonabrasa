@@ -173,7 +173,7 @@ button {
   margin: 0 auto;
   padding: 1.25rem 3em;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .main-container {
     padding: 1.25rem 1rem;
   }
@@ -221,7 +221,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .container {
     padding: 1.25rem 1rem;
   }
@@ -237,7 +237,7 @@ button {
 .container .logo img {
   padding-right: 0.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .container .logo {
     font-size: 20px;
   }
@@ -248,7 +248,7 @@ button {
 .container .menu-mobile {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .container .menu-mobile {
     display: block;
     font-size: 1.5rem;
@@ -259,7 +259,7 @@ button {
   display: flex;
   gap: 1.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .container .list-menu {
     display: none;
   }
@@ -281,7 +281,7 @@ button {
   align-items: center;
   gap: 2rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .inicio {
     flex-direction: column-reverse;
     gap: 1rem;
@@ -312,10 +312,15 @@ button {
 
 .category-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
   justify-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .category-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 .category-list .card {
   display: flex;
@@ -354,7 +359,7 @@ button {
   align-items: center;
   gap: 1.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .about {
     flex-direction: column;
     gap: 0;
@@ -370,7 +375,7 @@ button {
   height: auto;
   margin: auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .about .img-about img {
     width: 75%;
   }
@@ -402,7 +407,7 @@ button {
 .list-advantage {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
   justify-items: start;
 }
 .list-advantage .item-advantage {
