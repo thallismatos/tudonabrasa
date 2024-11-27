@@ -191,7 +191,7 @@ button {
   text-transform: uppercase;
 }
 .button:hover {
-  background-color: #a40e0e;
+  background-color: rgb(164.0087336245, 13.9912663755, 13.9912663755);
 }
 
 .card {
@@ -413,4 +413,6 @@ button {
   margin-left: 0.5rem;
   white-space: nowrap;
   font-size: clamp(0.875rem, 2vw, 1rem);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
