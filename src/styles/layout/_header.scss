@@ -17,24 +17,12 @@
   }
 
   .logo {
-    font-size: 24px;
+    @include font-clamp(large);
     font-weight: bold;
     text-decoration: none;
     color: $c7;
     display: flex;
     align-items: center;
-
-    img {
-      padding-right: 0.5rem;
-    }
-
-    @include respond-to(mobile) {
-      font-size: 20px;
-
-      img {
-        padding: 0.25rem;
-      }
-    }
   }
 
   .menu-mobile {
@@ -48,12 +36,7 @@
   }
 
   .list-menu {
-    display: flex;
-    gap: 1.5rem;
-
-    @include respond-to(mobile) {
-      display: none;
-    }
+    @include flex($gap: 1.5rem);
 
     a {
       text-decoration: none;
@@ -65,6 +48,10 @@
       &:hover {
         color: $primary;
       }
+    }
+
+    @include respond-to(mobile) {
+      display: none;
     }
   }
 }

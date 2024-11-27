@@ -16,6 +16,7 @@ $primary: #d31212;
 $border: 0.25rem solid rgba(0, 0, 0, 0.1);
 $border-radius: 0.25rem;
 $box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+$margin-bottom: 0.625rem;
 $max-width: 1200px;
 
 /* Mixins */
@@ -25,10 +26,11 @@ $max-width: 1200px;
   gap: 1rem;
 }
 
-@mixin flex {
+@mixin flex($justify: space-between, $align: center, $gap: 2rem) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
 }
 
 @mixin container {
@@ -37,10 +39,22 @@ $max-width: 1200px;
   padding: 1.25rem 3em;
 }
 
-@mixin font($size) {
-  font-family: "Satisfy", cursive;
-  font-size: $size;
-  color: $primary;
+@mixin font-clamp($size) {
+  @if $size == x-small {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem); // 12px to 14px
+  } @else if $size == small {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  } @else if $size == medium {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  } @else if $size == large {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  } @else if $size == x-large {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+  } @else if $size == xx-large {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  } @else {
+    @warn "Tamanho não definido! Use: x-small, small, medium, large, x-large, ou xx-large.";
+  }
 }
 
 @mixin respond-to($breakpoint) {

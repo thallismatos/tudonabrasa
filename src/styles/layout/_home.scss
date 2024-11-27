@@ -1,0 +1,52 @@
+.home {
+  @include flex;
+
+  @include respond-to(mobile) {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  h1 {
+    @include font-clamp(xx-large);
+    color: $c7;
+    line-height: 1.2;
+    margin-bottom: $margin-bottom;
+  }
+
+  .img-home {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.category-list {
+  @include grid(140px);
+  justify-items: center;
+  padding-bottom: 1.5rem;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .card {
+    img {
+      width: 50px;
+      height: auto;
+    }
+
+    h3 {
+      @include font-clamp(small);
+      color: $c7;
+    }
+
+    &:hover {
+      background: $primary;
+
+      h3 {
+        color: $c1;
+      }
+    }
+  }
+}

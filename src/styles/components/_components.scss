@@ -6,6 +6,31 @@
   }
 }
 
+.text-highlight {
+  display: block;
+  @include font-clamp(large);
+  color: $primary;
+  font-family: "Satisfy", cursive;
+
+  @include respond-to(mobile) {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.text-subtitle {
+  @include font-clamp(x-large);
+  line-height: 1.2;
+  margin-bottom: $margin-bottom;
+}
+
+.description {
+  @include font-clamp(small);
+  color: $c5;
+  margin-bottom: $margin-bottom;
+  line-height: 2;
+  font-style: italic;
+}
+
 .button {
   display: inline-block;
   background-color: $primary;
@@ -16,6 +41,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
   text-transform: uppercase;
+  margin-bottom: $margin-bottom;
 
   &:hover {
     background-color: darken($primary, 10%);
@@ -23,10 +49,16 @@
 }
 
 .card {
-      background: $c2;
-      padding: 60px;
-      text-align: center;
-      border-radius: $border-radius;
-      width: 130px;
-      height: 150px;
+  @include flex(center, center);
+  background: $c1;
+  padding: 0.875rem;
+  text-align: center;
+  border-radius: $border-radius;
+  width: 100%;
+  height: 10rem;
+  transition: background 0.5s ease;
+
+  @include respond-to(mobile) {
+    height: auto;
+  }
 }
