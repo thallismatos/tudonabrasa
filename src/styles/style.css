@@ -171,7 +171,7 @@ button {
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 3em;
 }
 @media (max-width: 768px) {
   .main-container {
@@ -191,7 +191,7 @@ button {
   text-transform: uppercase;
 }
 .button:hover {
-  background-color: rgb(164.0087336245, 13.9912663755, 13.9912663755);
+  background-color: #a40e0e;
 }
 
 .card {
@@ -216,10 +216,15 @@ button {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 3em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 1.25rem 1rem;
+  }
 }
 .container .logo {
   font-size: 24px;
@@ -310,12 +315,7 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 1.5rem;
   justify-items: center;
-  padding-bottom: 1.5rem;
-}
-@media (max-width: 768px) {
-  .category-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  padding-bottom: 1rem;
 }
 .category-list .card {
   display: flex;
@@ -325,7 +325,7 @@ button {
   padding: 14px;
   text-align: center;
   border-radius: 0.25rem;
-  width: 160px;
+  width: 100%;
   height: 160px;
   transition: background 0.5s ease;
 }
@@ -413,6 +413,4 @@ button {
   margin-left: 0.5rem;
   white-space: nowrap;
   font-size: clamp(0.875rem, 2vw, 1rem);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
