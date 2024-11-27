@@ -114,7 +114,7 @@ html {
   scroll-behavior: smooth;
   /* Estilos para Firefox */
   scrollbar-width: thin;
-  scrollbar-color: #e31414 #f5f7fa;
+  scrollbar-color: #d31212 #f5f7fa;
 }
 
 /* Estilos para WebKit (Chrome, Safari, Edge) */
@@ -129,7 +129,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e31414;
+  background: #d31212;
   border-radius: 10px;
 }
 
@@ -171,12 +171,17 @@ button {
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.25rem 1rem;
+  padding: 1.25rem 2rem;
+}
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1.25rem 1rem;
+  }
 }
 
 .button {
   display: inline-block;
-  background-color: #e31414;
+  background-color: #d31212;
   color: #f5f7fa;
   border: none;
   border-radius: 0.25rem;
@@ -186,7 +191,7 @@ button {
   text-transform: uppercase;
 }
 .button:hover {
-  background-color: rgb(180.1295546559, 15.8704453441, 15.8704453441);
+  background-color: #a40e0e;
 }
 
 .card {
@@ -211,7 +216,7 @@ button {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.25rem 1rem;
+  padding: 1.25rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -262,7 +267,7 @@ button {
   transition: color 0.3s;
 }
 .container .list-menu a:hover {
-  color: #e31414;
+  color: #d31212;
 }
 
 .inicio {
@@ -279,7 +284,7 @@ button {
 }
 .inicio .text-inicio span {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: #e31414;
+  color: #d31212;
 }
 .inicio .text-inicio h1 {
   font-size: clamp(2rem, 5vw, 2.5rem);
@@ -302,10 +307,15 @@ button {
 
 .category-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 1.5rem;
   justify-items: center;
   padding-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .category-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .category-list .card {
   display: flex;
@@ -320,7 +330,7 @@ button {
   transition: background 0.5s ease;
 }
 .category-list .card img {
-  width: 90px;
+  width: 50px;
   height: auto;
 }
 .category-list .card h3 {
@@ -328,7 +338,7 @@ button {
   color: #0d0d0d;
 }
 .category-list .card:hover {
-  background: #e31414;
+  background: #d31212;
 }
 .category-list .card:hover h3 {
   color: #f5f7fa;
@@ -369,10 +379,10 @@ button {
   padding: 1rem 0;
 }
 .about .text-about span {
-  color: #e31414;
+  color: #d31212;
   font-family: "Satisfy", cursive;
   font-size: 2rem;
-  color: #e31414;
+  color: #d31212;
 }
 .about .text-about h2 {
   font-size: clamp(2rem, 5vw, 2.5rem);
@@ -391,7 +401,7 @@ button {
 
 .list-advantage {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   justify-items: start;
 }
@@ -403,6 +413,4 @@ button {
   margin-left: 0.5rem;
   white-space: nowrap;
   font-size: clamp(0.875rem, 2vw, 1rem);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
