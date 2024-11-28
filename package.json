@@ -1,11 +1,13 @@
 {
   "name": "tudonabrasa",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "<div align=\"center\">\r   <img alt=\"\" src=\"\" width=\"20%\">\r   <h3></h3>\r </div>",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/styles/style.scss src/styles/style.css"
+    "build": "sass src/styles/style.scss src/styles/style.css --style=compressed",
+    "watch": "sass --watch src/styles/style.scss src/styles/style.css",
+    "build-and-watch": "npm run build && npm run watch"
   },
   "keywords": [],
   "author": "",
