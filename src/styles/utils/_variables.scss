@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Satisfy&display=swap");
 
-/* Paleta de cores */
 $c1: #f5f7fa;
 $c2: #e1e3e5;
 $c3: #a5a6a8;
@@ -12,59 +11,8 @@ $c8: #0d0d0d;
 
 $primary: #d31212;
 
-/* Tamanhos */
 $border: 0.25rem solid rgba(0, 0, 0, 0.1);
 $border-radius: 0.25rem;
 $box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
 $margin-bottom: 0.625rem;
 $max-width: 1200px;
-
-/* Mixins */
-@mixin grid($tamanho) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($tamanho, 1fr));
-  gap: 1rem;
-}
-
-@mixin flex($justify: space-between, $align: center, $gap: 2rem) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  gap: $gap;
-}
-
-@mixin container {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 1.25rem 3em;
-}
-
-@mixin font-clamp($size) {
-  @if $size == x-small {
-    font-size: clamp(0.75rem, 1.5vw, 0.875rem); // 12px to 14px
-  } @else if $size == small {
-    font-size: clamp(0.875rem, 2vw, 1rem);
-  } @else if $size == medium {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-  } @else if $size == large {
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
-  } @else if $size == x-large {
-    font-size: clamp(1.5rem, 5vw, 2.25rem);
-  } @else if $size == xx-large {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-  } @else {
-    @warn "Tamanho não definido! Use: x-small, small, medium, large, x-large, ou xx-large.";
-  }
-}
-
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == mobile {
-    @media (max-width: 767.98px) {
-      @content;
-    }
-  } @else if $breakpoint == tablet {
-    @media (min-width: 768px) and (max-width: 1023.98px) {
-      @content;
-    }
-  }
-}

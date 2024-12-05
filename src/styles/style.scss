@@ -1,8 +1,7 @@
-@import 'utils/variables';
-@import 'utils/reset';
-@import 'components/components';
+@use "./utils/reset";
+@use "./components/components";
 
-@import 'layout/header';
-@import 'layout/home';
-@import 'layout/about';
-@import 'layout/popular';
+@use "./layout/header";
+@use "./layout/home";
+@use "./layout/about";
+@use "./layout/popular";

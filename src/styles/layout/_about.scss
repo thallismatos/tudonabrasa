@@ -1,3 +1,6 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
 .bg-about {
   background-color: $c1;
 }
