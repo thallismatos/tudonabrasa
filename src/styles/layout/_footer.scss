@@ -1,0 +1,78 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
+.footer {
+  background: $c1;
+  padding: 1.25rem 3rem;
+
+  @include respond-to(mobile) {
+    padding: 1.25rem 1rem;
+  }
+
+  .footer-content {
+    max-width: 1400px;
+    @include grid(200px);
+    justify-items: center;
+    margin: auto;
+    padding: 1rem 0;
+
+    @include respond-to(tablet) {
+      justify-items: start;
+    }
+    @include respond-to(mobile) {
+      justify-items: start;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      @include font-clamp(large);
+      margin-bottom: 1rem;
+
+      @include respond-to(mobile) {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
+
+.footer-list {
+  position: relative;
+
+  li {
+    @include font-clamp(small);
+    display: flex;
+    align-items: center;
+    color: $c5;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url("../assets/icons/arrow.svg") no-repeat center;
+      background-size: contain;
+      margin-right: 8px;
+    }
+  }
+}
+
+.footer-network {
+  @include flex(center, center, 0);
+  flex-direction: column;
+
+  .bi {
+    @include font-clamp(large);
+    color: $primary;
+    padding: 0.15rem;
+    cursor: pointer;
+  }
+
+  .direitos {
+    @include font-clamp(small);
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
