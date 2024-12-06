@@ -34,6 +34,8 @@
   }
 
   .card {
+    @include card;
+
     img {
       width: 50px;
       height: auto;

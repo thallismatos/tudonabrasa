@@ -21,7 +21,7 @@
 
 @mixin font-clamp($size) {
   @if $size == x-small {
-    font-size: clamp(0.75rem, 1.5vw, 0.875rem); // 12px to 14px
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   } @else if $size == small {
     font-size: clamp(0.875rem, 2vw, 1rem);
   } @else if $size == medium {
@@ -46,5 +46,21 @@
     @media (min-width: 768px) and (max-width: 1023.98px) {
       @content;
     }
+  }
+}
+
+@mixin card($width: 100%, $height: 10rem) {
+  @include flex(center, center, 1rem);
+  flex-direction: column;
+  background: $c1;
+  padding: 0.875rem;
+  text-align: center;
+  border-radius: $border-radius;
+  width: $width;
+  height: $height;
+  transition: background 0.5s ease;
+
+  @include respond-to(mobile) {
+    height: auto;
   }
 }

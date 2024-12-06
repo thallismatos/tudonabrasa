@@ -1,7 +1,7 @@
 {
   "name": "tudonabrasa",
-  "version": "1.3.8",
-  "description": "<div align=\"center\">\r   <img alt=\"\" src=\"\" width=\"20%\">\r   <h3></h3>\r </div>",
+  "version": "1.4.9",
+  "description": "Restaurante Fictício Tudo na Brasa",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

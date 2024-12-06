@@ -50,18 +50,3 @@
     background-color: ajust($primary, 10%);
   }
 }
-
-.card {
-  @include flex(center, center);
-  background: $c1;
-  padding: 0.875rem;
-  text-align: center;
-  border-radius: $border-radius;
-  width: 100%;
-  height: 10rem;
-  transition: background 0.5s ease;
-
-  @include respond-to(mobile) {
-    height: auto;
-  }
-}

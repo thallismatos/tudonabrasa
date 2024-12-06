@@ -1,6 +1,8 @@
 @use "../utils/variables" as *;
 
-html,
+html {
+  color: $c7;
+}
 body,
 div,
 span,
@@ -137,7 +139,7 @@ ul {
   list-style: none;
 }
 
-a {
+a { display: inline-block;
   text-decoration: none;
   color: inherit;
   background: none;

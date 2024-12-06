@@ -1,7 +1,8 @@
-@use "./utils/reset";
-@use "./components/components";
+@forward "./utils/reset";
+@forward "./components/components";
 
-@use "./layout/header";
-@use "./layout/home";
-@use "./layout/about";
-@use "./layout/popular";
+@forward "./layout/header";
+@forward "./layout/home";
+@forward "./layout/about";
+@forward "./layout/menu";
+@forward "./layout/footer";

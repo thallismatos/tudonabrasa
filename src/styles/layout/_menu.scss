@@ -1,0 +1,64 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
+
+.menu-list {
+  @include grid(250px);
+
+  .card {
+    position: relative;
+    @include card(100%, 100%);
+
+    .bi-heart-fill {
+      position: absolute;
+      @include font-clamp(large);
+
+      top: 1rem;
+      right: 1.5rem;
+      color: $c5;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .img-card {
+      margin: 0;
+
+      img {
+        height: auto;
+        width: 150px;
+      }
+    }
+  }
+}
+
+.text-card {
+  h3 {
+    @include font-clamp(medium);
+  }
+
+  .stars {
+    padding: 0.25rem 0;
+    @include font-clamp(small);
+
+    .bi {
+      color: gold;
+    }
+
+    span {
+      color: $c5;
+    }
+  }
+
+  .price {
+    @include font-clamp(medium);
+
+    span {
+      @include font-clamp(small);
+      color: $c5;
+      text-decoration: line-through;
+    }
+  }
+}
