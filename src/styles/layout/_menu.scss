@@ -7,7 +7,7 @@
 
   .card {
     position: relative;
-    @include card(100%, 100%);
+    @include card(100%, 350px);
 
     .bi-heart-fill {
       position: absolute;
@@ -28,7 +28,7 @@
 
       img {
         height: auto;
-        width: 150px;
+        width: 170px;
       }
     }
   }

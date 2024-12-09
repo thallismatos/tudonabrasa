@@ -50,7 +50,7 @@
 }
 
 @mixin card($width: 100%, $height: 10rem) {
-  @include flex(center, center, 1rem);
+  @include flex(center, center, 0rem);
   flex-direction: column;
   background: $c1;
   padding: 0.875rem;
@@ -59,8 +59,4 @@
   width: $width;
   height: $height;
   transition: background 0.5s ease;
-
-  @include respond-to(mobile) {
-    height: auto;
-  }
 }

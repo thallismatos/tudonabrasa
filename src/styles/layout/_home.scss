@@ -9,14 +9,22 @@
     gap: 1rem;
   }
 
-  h1 {
-    @include font-clamp(xx-large);
-    color: $c7;
-    line-height: 1.2;
-    margin-bottom: $margin-bottom;
+  .text-home {
+    flex: 1 1 40rem;
+
+    @include respond-to(mobile) {
+      flex: 1 1 auto;
+    }
+    h1 {
+      @include font-clamp(xx-large);
+      color: $c7;
+      line-height: 1.2;
+      margin-bottom: $margin-bottom;
+    }
   }
 
   .img-home {
+    flex: 1 1 40rem;
     width: 100%;
     height: auto;
     display: block;
